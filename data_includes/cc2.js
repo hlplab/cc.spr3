@@ -1,4 +1,4 @@
-var shuffleSequence = seq("intro", "info", "practice", sepWith("sep", anyOf("filler", startsWith("StimZero"), startswith("StimThat"))), "contact", "sr", "code");
+var shuffleSequence = seq("intro", "info", "practice", sepWith("sep", anyOf("filler", startsWith("StimZero"), startsWith("StimThat"))), "contact", "sr", "code");
 
 var ds = "RegionedSentence";
 var qs = "Question";
