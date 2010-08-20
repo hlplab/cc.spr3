@@ -1,4 +1,4 @@
-var shuffleSequence = seq("intro", "info", "practice", sepWith("sep", anyOf("filler", startsWith("StimZero"), startsWith("StimThat"))), "contact", "sr", "code");
+var shuffleSequence = seq("intro", "info", "practice", "endprac", sepWith("sep", anyOf("filler", startsWith("StimZero"), startsWith("StimThat"))), "contact", "sr", "code");
 
 var ds = "RegionedSentence";
 var qs = "Question";
@@ -29,6 +29,7 @@ var items = [
     ["practice", ds, {s: "I had a waiting period on my pistol because I was down in Tennessee. And they had a waiting period."}, 
         qs, {q: "Is there a waiting period for pistols in Tennessee?" , hasCorrect: "Yes", randomOrder: false}],
     ["practice" , ds, {s: "Well, for a bigger city they are pretty thick. "}],
+    ["endprac", "Message", {consentRequired: false, html: {include: "end_practice.html"}}],
     [["filler", 5], ds, {s: "And there is just no time."}, 
         qs, {q: "Is there a lot of time with a newborn?" , hasCorrect: "No", randomOrder: false}],
     [["StimZero.OriginalZero", 6], ds, {s: "I think@MATRIXVERB I@CCSUBJ1 am@CCVERB1 going@CCVERB2 to@CCVERB3 do@CCVERB4 it this spring actually."}],
