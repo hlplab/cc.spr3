@@ -1,4 +1,4 @@
-var shuffleSequence = seq("intro", "info", "practice", "endprac", sepWith("sep", anyOf("filler", startsWith("StimZero"), startsWith("StimThat"))), "contact", "sr", "code");
+var shuffleSequence = seq("intro", "info", "startprac", "practice", "endprac", sepWith("sep", anyOf("filler", startsWith("StimZero"), startsWith("StimThat"))), "contact", "sr", "code");
 
 var ds = "RegionedSentence";
 var qs = "Question";
@@ -23,6 +23,7 @@ var items = [
     ["sep", "Separator", {}],
     ["intro", "Message", {consentRequired: true, html: {include: "intro.html"}}],
     ["info", "Form", {html: {include: "info.html"}}],
+    ["startprac", "Message", {consentRequired: false, html: {include: "start_practice.html"}}],
     ["practice", ds, {s: "As soon as he went there, the teacher took one look at him."}],
     ["practice", ds, {s: "And they are talking a lot about the school situation there, too. "}, 
         qs, {q: "Is there no talk about the school situation?" , hasCorrect: "No", randomOrder: false}],
