@@ -1,5 +1,7 @@
 var shuffleSequence = seq("intro", "info", "startprac", "practice", "endprac", sepWith("sep", anyOf("filler", startsWith("StimZero"), startsWith("StimThat"))), "contact", "sr", "code");
 
+var pastworkers = ["A127R5QI5OGBIK", "A162TOBLD1669W", "A17CIT8XFITL6D", "A1G5FQO266Q4Y4", "A1GFL5FF0P8C7S", "A1JQS9AN8LEAKZ", "A1M90FFR8GU9TP", "A1Q53V40JETIQ9", "A1UTM3JGPY4RPW", "A253Q11TZPQPIZ", "A2B43KC23BHG8X", "A2MGH3MBXMKD96", "A31WOUTVXO1VE4", "A3AM7D2UWBRS7Z", "A3AV8LLKM8LGFW", "A3ESUADNEH83UU", "A3O749MMVC22QA", "A4F5A6X7RL479", "A5CMNI7B03XL", "A98XHW6B1VSSQ", "AARST1TOOXCPL", "ACTW5YEWV9OR0", "AGX7LA4E59JZ3", "AN8XVL9FULOYY"];
+
 var ds = "RegionedSentence";
 var qs = "Question";
 
@@ -22,7 +24,12 @@ var items = [
     ["sr", "__SendResults__", { }],
 	["sep", "Separator", {}],
 	["intro", "Message", {consentRequired: true, html: {include: "intro.html"}}],
-	["info", "Form", {html: {include: "info.html"}}],
+	["info", "Form", {
+        html: {include: "info.html"},
+        validators: {
+            workerid: function(s) {if pastworkers.indexOf(s) == -1 return true; else return "You have already done a CC SPR experiment";}
+        }
+    }],
     ["startprac", "Message", {consentRequired: false, html: {include: "start_practice.html"}}],
 	["practice", ds, {s: "As soon as he went there, the teacher took one look at him."}],
 	["practice", ds, {s: "And they're talking a lot about the, you know, the school situation there, too."}, 
