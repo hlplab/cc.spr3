@@ -27,7 +27,7 @@ var items = [
 	["info", "Form", {
         html: {include: "info.html"},
         validators: {
-            workerid: function(s) {if pastworkers.indexOf(s) == -1 return true; else return "You have already done a CC SPR experiment";}
+            workerid: function(s) {if (pastworkers.indexOf(s) == -1) return true; else return "You have already done a CC SPR experiment";}
         }
     }],
     ["startprac", "Message", {consentRequired: false, html: {include: "start_practice.html"}}],
