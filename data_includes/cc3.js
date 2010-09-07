@@ -194,7 +194,7 @@ var items = [
 	[["StimThat.OriginalThat",[78,6]], ds, {s: "Well, my sociology class taught@MATRIXVERB us that@COMPL it@CCSUBJ1 was@CCVERB1 not a deterrent."}],
 	[["StimZero.OriginalThat",[78,6]], ds, {s: "Well, my sociology class taught@MATRIXVERB us it@CCSUBJ1 was@CCVERB1 not a deterrent."}],
 	[["filler", 79], ds, {s: "Well, I don't know how much you can learn."}],
-	[["filler", 80], ds, {s: "We, um, as I said, living in an area of Washington, D C. We definitely see this."}],
+	[["filler", 80], ds, {s: "We, um, as I said, living in an area of Washington_D.C. We definitely see this."}],
 	[["StimThat.OriginalZero",[81,6]], ds, {s: "I wish@MATRIXVERB that@COMPL they’d@CCSUBJ1 put@CCVERB1 those on."}],
 	[["StimZero.OriginalZero",[81,6]], ds, {s: "I wish@MATRIXVERB they’d@CCSUBJ1 put@CCVERB1 those on."}],
 	[["filler", 82], ds, {s: "We're going to discuss the different issues and stuff."}],
